@@ -24,30 +24,27 @@ public class Alumno implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Positive(message = "El identificador debe ser positivo")
-	//@GeneratedValue(strategy = GenerationType.IDENTITY)
-	//@Column(nullable = false, unique = true)
-	@NotNull(message = "El identificador no debe ser nulo")
-	@NotEmpty(message = "El identificador no debe estar vacío")
+	@Positive(message = "debe ser positivo")
+	@NotNull(message = "no debe ser nulo")
 	private Long id;
 
-	@NotNull(message = "El nombre no debe ser nulo")
-	@NotEmpty(message = "El nombre no debe estar vacío")
-	@Size(min = 1, max = 255, message = "El nombre debe tener un valor entre los rangos 1 al 255")
+	@NotNull(message = "debe ser nulo")
+	@NotEmpty(message = "debe estar vacío")
+	@Size(min = 1, max = 255, message = "debe tener un valor entre los rangos 1 al 255")
 	private String nombre;
 
-	@NotNull(message = "El apellido no debe ser nulo")
-	@NotEmpty(message = "El apellido no debe estar vacío")
-	@Size(min = 1, max = 255, message = "El apellido debe tener un valor entre los rangos 1 al 255")
+	@NotNull(message = "no debe ser nulo")
+	@NotEmpty(message = "no debe estar vacío")
+	@Size(min = 1, max = 255, message = "debe tener un valor entre los rangos 1 al 255")
 	private String apellido;
 
-	@NotNull(message = "El estado no debe ser nula")
+	@NotNull(message = " no debe ser nulo")
 	//@Pattern(regexp = "^true$|^false$", message = "El estado ingresado debe ser true o false")
 	private Boolean estado;
 
-	@NotNull(message = "La edad no debe ser nula")
-	@Positive(message = "La edad debe ser positiva")
-	@Min(value = 1, message = "Edad debe ser mínimo 1")
-	@Max(value = 150, message = "Edad debe ser máximo 150")
+	@NotNull(message = "no debe ser nulo")
+	@Positive(message = "debe ser positivo")
+	@Min(value = 1, message = "debe ser mínimo 1")
+	@Max(value = 150, message = "debe ser máximo 150")
 	private Integer edad;
 }

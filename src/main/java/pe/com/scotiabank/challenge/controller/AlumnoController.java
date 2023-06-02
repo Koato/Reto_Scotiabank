@@ -42,7 +42,7 @@ public class AlumnoController {
 			return new ResponseEntity<>(response, HttpStatus.CREATED);
 		} catch (Exception e) {
 			response.put("mensaje", "Error al insertarlo en la base de datos");
-			response.put("error", e.getMessage().concat(": ").concat(e.getMessage()));
+			response.put("error", e.getMessage());
 			return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
